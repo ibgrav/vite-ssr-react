@@ -1,0 +1,29 @@
+{
+  "name": "vite-ssr-react",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node bin/dev.js",
+    "prod": "node bin/prod.js",
+    "build:client": "vite build --manifest --outDir dist/client",
+    "build:node": "vite build --ssr src/server/entry.node.ts --outDir dist/node",
+    "build:netlify": "vite build --ssr src/server/entry.netlify.ts --outDir dist/netlify"
+  },
+  "dependencies": {
+    "node-fetch": "^3.2.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sirv": "^2.0.2"
+  },
+  "devDependencies": {
+    "@netlify/functions": "^1.0.0",
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "@vitejs/plugin-react": "^2.0.0-beta.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.0-beta.2"
+  }
+}
